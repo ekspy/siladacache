@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baby_powder"
+    android:fitsSystemWindows="true"
+    android:paddingTop="?attr/actionBarSize">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="Silada Seguros Logo"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@id/loginContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/itemInputContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_percent="0.8">
+
+        <EditText
+            android:id="@+id/edtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuário"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/pale_azure"
+            android:textColor="@color/medium_blue"
+            android:textColorHint="@color/gray" />
+
+        <EditText
+            android:id="@+id/edtSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/pale_azure"
+            android:textColor="@color/medium_blue"
+            android:textColorHint="@color/gray" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar Credenciais"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/yellow_green"
+            android:textColor="@color/medium_blue" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fazer Login"
+            android:backgroundTint="@color/pale_azure"
+            android:textColor="@color/medium_blue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemInputContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btnLogoff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginContainer"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_percent="0.8">
+
+        <EditText
+            android:id="@+id/edtItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="O que deseja segurar?"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/pale_azure"
+            android:textColor="@color/medium_blue"
+            android:textColorHint="@color/gray" />
+
+        <Button
+            android:id="@+id/btnSegurar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Segurar"
+            android:backgroundTint="@color/yellow_green"
+            android:textColor="@color/medium_blue" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_margin="16dp"
+        android:textColor="@color/medium_blue"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemInputContainer" />
+
+    <Button
+        android:id="@+id/btnLogoff"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Logoff"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/pale_azure"
+        android:textColor="@color/medium_blue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
