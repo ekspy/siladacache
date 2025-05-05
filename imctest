@@ -1,0 +1,12 @@
+package com.example.imccalc
+
+import org.junit.Test
+import org.junit.Assert.assertEquals
+
+class BMICalculatorTest {
+    @Test
+    fun testCalculateIMC() {
+        val result = BMICalculator.calculateIMC(70.0, 1.75)
+        assertEquals(22.86, result, 0.01)
+    }
+}
